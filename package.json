@@ -1,0 +1,23 @@
+{
+  "name": "buy_me-mysql-",
+  "version": "1.0.0",
+  "description": "An online shopping App used with MySQL and NODE",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/precto1285/BUY_ME-MySQL-.git"
+  },
+  "author": "Philippe Recto\u001b[A\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D bamazon\u001b[B\u001b[F\u001b[B\u001b[F\u001b[B\u001b[F\u001b[B\u001b[B\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/precto1285/BUY_ME-MySQL-/issues"
+  },
+  "homepage": "https://github.com/precto1285/BUY_ME-MySQL-#readme",
+  "dependencies": {
+    "inquirer": "^5.2.0",
+    "prompt": "^1.0.0"
+  }
+}
