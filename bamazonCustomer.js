@@ -1,12 +1,13 @@
-var Inquirer = require('inquirer');
-var fs = require('fs');
+var mySql = require('mysql');
 
-fs.readFile("./bamazon_products.sql", 'utf8', function(err, data){
-    if(err){
-        return console.log(err);
-    }
-    console.log(data);
-
+var con = mySql.createConnection({
+    host:'bamazon',
+    user:'root',
+    password:'P!n0YR0ck*',
+    database:'bamazon'
 });
 
-
+con.connect(function(err){
+    if (err) return err;
+    console.log("Connected!");
+});
