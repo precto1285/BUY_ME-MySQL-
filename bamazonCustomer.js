@@ -1,6 +1,11 @@
 const Mysql = require('mysql');
 
+const fs = require('fs');
+
+const mySqlbc = fs.readFile('./bamazon_products.js');
+
 const con = Mysql.createConnection({
+    file: mySqlbc,
     host:'localhost',
     port:3306,
     user:"root",
@@ -11,8 +16,8 @@ const con = Mysql.createConnection({
 connection.connect(function(err){
     if (err) throw err;
     console.log("Connected as ID ") + connection.threadId;
-    connection.end();
     readProducts();
+    connection.end();
 });
 
 function readProducts() {
