@@ -1,7 +1,6 @@
 const mysql = require('mysql');
 
 const con = mysql.createConnection({
-    file: mySqlbc,
     host:'127.0.0.1',
     port:3306,
     user:"root",
@@ -21,7 +20,6 @@ function readProducts() {
     con.query(
         "SELECT * FROM products", function (err, res) {
             if (err) throw err;
-
             console.log(res);
             con.end();
         }
