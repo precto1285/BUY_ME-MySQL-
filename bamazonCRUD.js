@@ -1,10 +1,7 @@
 const Mysql = require('mysql');
 
-
-const mySqlbc = fs.readFile('./bamazon_products.js');
-
 const con = Mysql.createConnection({
-    file: mySqlbc,
+
     host: '127.0.0.1',
     port: 3306,
     user: "root",
@@ -12,14 +9,14 @@ const con = Mysql.createConnection({
     database: "bamazon"
 });
 
-connect.connect(function (err) {
+con.connect(function (err) {
     if (err) throw err;
-    console.log("Connected as " + connection.threadId + "\n");
+    console.log("Connected as " + con.threadId + "\n");
     createProduct();
 });
 
 function createProduct() {
-    console.log("Instering a new product...\n");
+    console.log("Inserting a new product...\n");
     const query = connection.query(
         "INSERT INTO products SET ?",
         {
