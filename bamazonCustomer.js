@@ -25,7 +25,6 @@ function readProducts() {
             console.log(res);
             chooseProduct();
             
-            
         }
     );
 }
@@ -40,12 +39,11 @@ function chooseProduct() {
         console.log(answer.id)
         con.query("SELECT * FROM products", {id: answer.id}, function(err, res){
             console.log(
-                "id: " + res[0].id +
-                " || product_name: " + res[0].product_name +
-                " || department_name: " + res[0].product_name +
-                " || price: " + res[0].product_name +
-                " || stock_quantity: " + res[0].stock_quantity
+                "id: " + answer.id +
+                "product name: " + res[id].product_name
+
         );
+        chooseProduct();
         con.end();
         });
     });
