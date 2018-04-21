@@ -52,3 +52,5 @@ function chooseProduct() {
         });
     });
 };
+
+// only got 5 and half of the first 8 steps completed. still working on prompt message 2 onwards...
