@@ -24,12 +24,11 @@ function readProducts() {
             if (err) throw err;
             console.log(res);
             chooseProduct();
-            con.end();
+            
             
         }
     );
 }
-
 function chooseProduct() {
     inquirer
     .prompt({
@@ -47,7 +46,7 @@ function chooseProduct() {
                 " || price: " + res[0].product_name +
                 " || stock_quantity: " + res[0].stock_quantity
         );
-        chooseProduct();
+        con.end();
         });
     });
 };
