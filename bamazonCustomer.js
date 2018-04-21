@@ -37,13 +37,17 @@ function chooseProduct() {
     })
     .then(function(answer){
         console.log(answer.id)
-        con.query("SELECT * FROM products", {id: answer.id}, function(err, res){
-            console.log(
-                "id: " + answer.id +
-                "product name: " + res[id].product_name
-
-        );
-        chooseProduct();
+        con.query("SELECT id FROM products", {id: answer.id}, function(err, res){
+                for (var i = 0; i < res.length; i++){
+                    console.log(
+                        "id: "+ res[i].id +  
+                        " || product_name: " + res[i].product_name +
+                        " || department_name: " + res[i].department_name +
+                        " || price: " + res[i].price +
+                        " || stock_quantity: " + res[i].stock_quantity
+                    );
+                };        
+        readProduct();
         con.end();
         });
     });
